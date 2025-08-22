@@ -1,0 +1,13 @@
+body{
+  font-family: 'Fira Sans', Arial, sans-serif;
+  background-color: red;
+  font-size:1rem
+  line-height:1.7;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:'Space Grotesk', 'Fira Sans', sans-serif;
+  font-weight: 500;
+}
+
+
