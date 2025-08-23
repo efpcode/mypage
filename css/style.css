@@ -1,8 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #ffffff;
+  --text-color: #333333;
+}
+
+body.dark-mode {
+  --page-bg: #121212;
+  --text-color: #f0f0f0;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  /* Add a smooth transition for the color change */
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
 body{
   font-family: 'Fira Sans', Arial, sans-serif;
-  background-color: red;
-  font-size:1rem
+  font-size:1rem;
   line-height:1.7;
+  padding: 1rem;
+  margin:0;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -10,4 +34,152 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 500;
 }
 
+
+header, main, footer {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin:0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+ul a {
+  margin :1rem;
+  display: inline;
+}
+
+button{
+  width:2rem;
+  height:2rem;
+  display: flex;
+  border-radius: 10px;
+  justify-content:center;
+  border: 0;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 0;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+
+/* Individual blocks and elements */
+
+.youtube-responsive {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+  overflow: hidden;
+}
+
+.youtube-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.site-header{
+  position: sticky;
+  box-sizing: border-box;
+  top: 0;
+  padding:1rem;
+  z-index: 1000;
+  background-color: transparent; /* or transparent if overlaying */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  backdrop-filter: blur(8px);
+  margin: 0 auto;
+
+}
+
+.site-header__top{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap:1rem;
+
+}
+.site-header__logo{
+  height: auto;
+  height:5rem;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  margin:0 auto;
+}
+
+.site-header__nav{
+  transition: max-height 300ms ease-in-out;
+  max-height:0;
+  overflow:hidden;
+}
+
+.site-header__nav-list{
+  display:flex;
+  justify-content:center;
+  gap:0.6rem;
+  padding:0;
+  margin: 1rem;
+}
+
+.site-header__nav-link {
+  /* New styles for the pill shape */
+  border-radius: 0px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.site-header__nav-link:hover,
+.site-header__nav-link:active,
+.site-header__nav-link:focus{
+  background-color: #e0e0e0; /* A slightly darker shade of your background */
+  color: #000;
+  border-color:none;
+}
+
+.site-header__nav.is-visible{
+  max-height:200px;
+}
+
+
+
+
+@media (min-width: 376px) {
+  body {
+    background-color: green;
+  }
+}
+
+
+@media (min-width: 667px) {
+  body {
+    background-color: blue;
+    max-height: auto;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: pink;
+  }
+}
 
