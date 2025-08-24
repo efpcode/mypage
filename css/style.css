@@ -7,11 +7,13 @@
 :root {
   --page-bg: #ffffff;
   --text-color: #333333;
+  --btn-color:red;
 }
 
 body.dark-mode {
   --page-bg: #121212;
   --text-color: #f0f0f0;
+  --btn-color:red;
 }
 
 body {
@@ -61,7 +63,7 @@ ul a {
   display: inline;
 }
 
-button{
+.site-header__button{
   width:2rem;
   height:2rem;
   display: flex;
@@ -69,11 +71,21 @@ button{
   justify-content:center;
   border: 0;
   cursor: pointer;
-  background-color: #f0f0f0;
   padding: 0;
   align-items: center;
   flex-shrink: 0;
+  background-color: #e0e0e0;
+  transition: background-color 0.1s ease-in-out;
 }
+
+.site-header__button--touched{
+  background-color:var(--btn-color);
+
+}
+.site-header__button:focus{
+  background-color:var(--btn-color);
+}
+
 
 
 /* Individual blocks and elements */
@@ -155,7 +167,7 @@ button{
   border-color:none;
 }
 
-.site-header__nav.is-visible{
+.site-header__nav--visible{
   max-height:200px;
 }
 
@@ -180,6 +192,11 @@ button{
 @media (min-width: 1024px) {
   body {
     background-color: pink;
+  }
+}
+@media (hover: none) {
+  .site-header__button:hover {
+    background-color: "e0e0e0"; /* or same as default */
   }
 }
 
