@@ -1,10 +1,8 @@
 const headerButtons = document.querySelectorAll(".site-header__button");
 
 function touchedButtonStart(event) {
-  isScrolling = false;
   const button = event.currentTarget;
   button.classList.add("site-header__button--touched");
-  console.log("Touch started");
 }
 
 function touchedButtonEnd(event) {
@@ -12,14 +10,17 @@ function touchedButtonEnd(event) {
   setTimeout(() => {
     button.classList.remove("site-header__button--touched");
     button.blur();
-    console.log("Touch end");
   }, 300);
 }
 
 if (headerButtons) {
   headerButtons.forEach((button) => {
-    button.addEventListener("pointerdown", touchedButtonStart);
-    button.addEventListener("pointerup", touchedButtonEnd);
-    button.addEventListener("pointerleave", touchedButtonEnd);
+    const startEvents = ["mouseenter", "click", "touchstart"];
+    const endEvents = ["mouseleave", "mouseup", "touchend", "touchcancel"];
+
+    startEvents.forEach((evt) =>
+      button.addEventListener(evt, touchedButtonStart),
+    );
+    endEvents.forEach((evt) => button.addEventListener(evt, touchedButtonEnd));
   });
 }
