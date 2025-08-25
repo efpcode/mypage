@@ -63,6 +63,10 @@ ul a {
   display: inline;
 }
 
+
+
+
+
 .site-header__button{
   width:2rem;
   height:2rem;
@@ -106,16 +110,30 @@ ul a {
 
 
 .site-header{
-  position: sticky;
+  position: fixed;
   box-sizing: border-box;
   top: 0;
-  padding:1rem;
+  left: 50%;
+  padding:0rem;
   z-index: 1000;
   background-color: transparent; /* or transparent if overlaying */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   backdrop-filter: blur(8px);
   margin: 0 auto;
+  transition: opacity 1.2s ease-in-out 1.2s, 
+  transform 1.2s ease-in-out 1.2s,  
+  max-height 1.2s ease-in-out 1.2s;
+  transform:translateX(-50%);
+  max-height:200px;
+  overflow: visible;
 
+}
+.site-header--hidden{
+ opacity: 0;
+ transform: translateX(-100%);
+ pointer-events: none; /* Disables interaction when hidden */
+ max-height:0;
+ overflow: hidden;
 }
 
 .site-header__top{
