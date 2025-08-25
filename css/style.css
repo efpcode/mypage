@@ -256,16 +256,18 @@ ul a {
 #typewriter{
   font-family:'Fira Mono';
   margin:1rem auto;
-  border-radius:2rem;
-  padding:1rem;
+  border-radius:1rem 3rem;
+  padding:0.5rem;
   background-color:var(--btn-color);
   justify-content:center;
   display:flex;
-  flex-shrink:0;
   max-width:400px;
   width:100%;
+  text-align:center;
   text-wrap:balance;
   min-width:170px;
+  font-weight:600;
+  height:2.6rem;
 }
 
 
