@@ -65,7 +65,9 @@ ul a {
 
 
 
+/* Header elements */
 
+/* headerbutton background-color switches */
 
 .site-header__button{
   width:2rem;
@@ -90,7 +92,7 @@ ul a {
 
 
 
-/* Individual blocks and elements */
+/* iframe with youtube video */
 
 .youtube-responsive {
   position: relative;
@@ -109,6 +111,7 @@ ul a {
 }
 
 
+/* Header display and hidden transitions */
 .site-header{
   position: fixed;
   box-sizing: border-box;
@@ -135,6 +138,9 @@ ul a {
  max-height:0;
  overflow: hidden;
 }
+
+
+/* header elements like logos and buttons */
 
 .site-header__top{
 
@@ -188,7 +194,83 @@ ul a {
 }
 
 
+/* Main elements */
 
+/* H1 in main  */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.pagecontent__main-heading{
+  display: grid;
+  gap: 0.125rem;
+  grid-template-columns:1fr;
+  text-align:right;
+
+  animation-name: slideInFromTop;
+  animation-duration: 1s;
+  animation-timing-function:  ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+
+}
+
+/* Profile Picture  */
+.pagecontent__profile-picture{
+  border-radius:2rem 4rem;
+}
+
+/* Statment words  */
+.pagecontent__value-list{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap: 0.8rem;
+  margin:0.75rem;
+  padding:0.75rem;
+  text-align:center;
+  justify-content: center;
+  font-family: 'Space Grotesk'
+}
+
+
+.pagecontent__value-item--padded {
+  padding: 0.25rem;
+  font-family: 'Space Grotesk';
+}
+
+#lastValueWord{
+  color:var(--page-bg);
+  background-color:var(--text-color);
+  border-radius:2rem 4rem;
+  padding: 0.25rem;
+}
+
+#typewriter{
+  font-family:'Fira Mono';
+  margin:1rem auto;
+  border-radius:2rem;
+  padding:1rem;
+  background-color:var(--btn-color);
+  justify-content:center;
+  display:flex;
+  flex-shrink:0;
+  max-width:400px;
+  width:100%;
+  text-wrap:balance;
+  min-width:170px;
+}
+
+
+
+/* Media queries for responsivnes */
 
 @media (min-width: 376px) {
   body {
