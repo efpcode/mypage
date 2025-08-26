@@ -253,24 +253,50 @@ ul a {
   padding: 0.25rem;
 }
 
-#typewriter{
-  font-family:'Fira Mono';
-  margin:1rem auto;
-  border-radius:1rem 3rem;
-  padding:0.5rem;
-  background-color:var(--btn-color);
-  justify-content:center;
-  display:flex;
-  max-width:400px;
-  width:100%;
-  text-align:center;
-  text-wrap:balance;
-  min-width:170px;
-  font-weight:600;
-  height:2.6rem;
+.pagecontent__code-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagecontent__code-container pre {
+  background-color: var(--btn-color);
+  border-radius: 1rem 3rem;
+  padding: 0.5rem 3rem;
+  height: auto;
+  min-width: 170px;
+  max-width: 100%; /* Adjust as needed */
+  width: auto;
 }
 
+#typewriter{
+  font-family:'Fira Mono';
+  margin:0rem auto;
+  padding:0rem;
+  font-weight:600;
+  white-space: pre;
+  position:relative;
+  font-size:0.9rem;
+}
 
+#typewriter::after {
+  content: "\25AE"; /* The cursor character */
+  color: var(--text-color);
+  animation: blink 1s step-end infinite;
+  position:relative;
+  right:-1rem;
+  top:0.1rem;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#typewriter.typing-done::after {
+  opacity: 0;
+  animation: none;
+}
 
 /* Media queries for responsivnes */
 

@@ -1,15 +1,20 @@
+import { DATAHELLOWORLD } from "./jsonloader.js";
+import { getRandomKey } from "./randomizermap.js";
+
 const codeBlock = document.querySelector("#typewriter");
-let code = "print('Hello World!')";
 
 function clenupTxt() {
   if (codeBlock.textContent.length > 0) {
     codeBlock.textContent = "";
+    codeBlock.classList.remove("typing-done");
   }
 }
 
 function typeWriter(text) {
   let index = 0;
   let letters = "";
+  codeBlock.classList.remove("typing-done");
+
   let interval = setInterval(() => {
     if (index < text.length) {
       letters += text.charAt(index);
@@ -17,14 +22,27 @@ function typeWriter(text) {
       index++;
     } else {
       clearInterval(interval);
+      codeBlock.classList.add("typing-done");
     }
   }, 100);
 }
 
-setInterval(() => {
-  typeWriter(code);
+async function typingAnimation() {
+  const programMap = await DATAHELLOWORLD;
 
-  setTimeout(() => {
-    clenupTxt();
-  }, 5000);
-}, 6000);
+  if (!programMap) {
+    console.error("Faile to load program data");
+    return;
+  }
+
+  setInterval(() => {
+    const randomKey = getRandomKey(programMap);
+    const code = programMap.get(randomKey);
+    typeWriter(code);
+
+    setTimeout(() => {
+      clenupTxt();
+    }, 5000);
+  }, 6000);
+}
+document.addEventListener("DOMContentLoaded", typingAnimation);
