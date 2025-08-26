@@ -256,27 +256,23 @@ ul a {
 .pagecontent__code-container{
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.pagecontent__code-container pre {
-  background-color: var(--btn-color);
-  border-radius: 1rem 3rem;
-  padding: 0.5rem 3rem;
+  justify-content:end;
+  background-color: var(--btn-color); 
+  border-radius: 1rem  3rem;
+  padding: 0.5rem 0.7rem;
   height: auto;
-  min-width: 170px;
-  max-width: 100%; /* Adjust as needed */
-  width: auto;
+  max-width: 100%;
+  width: 400px;
+  flex-shrink 0rem;
+  overflow-x:hidden;
 }
 
 #typewriter{
   font-family:'Fira Mono';
-  margin:0rem auto;
-  padding:0rem;
-  font-weight:600;
+  font-weight:500;
   white-space: pre;
   position:relative;
-  font-size:0.9rem;
+  flex-shrink:0rem;
 }
 
 #typewriter::after {
@@ -284,7 +280,6 @@ ul a {
   color: var(--text-color);
   animation: blink 1s step-end infinite;
   position:relative;
-  right:-1rem;
   top:0.1rem;
 }
 

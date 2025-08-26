@@ -18,12 +18,14 @@ async function loadProgramDataAndCache(pathToFile) {
     console.warn("File was not loaded cause: ", error);
     console.log("Will use fallback data");
     const fallbackData = {
-      default: "console.log('Hej Världen!')",
+      default: "System.out.println('Hej Världen!')",
     };
+
     localStorage.setItem(
       localStorageProgramDataKey,
       JSON.stringify(fallbackData),
     );
+
     return new Map(Object.entries(fallbackData));
   }
 }
