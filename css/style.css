@@ -247,7 +247,7 @@ ul a {
   font-family: 'Space Grotesk';
 }
 
-#lastValueWord{
+.pagecontent__value-item--highlight{
   color:var(--page-bg);
   background-color:var(--text-color);
   border-radius:2rem 4rem;
