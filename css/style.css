@@ -228,7 +228,7 @@ ul a {
   border-radius:2rem 4rem;
 }
 
-/* Statment words  */
+/* Value words  */
 .pagecontent__value-list{
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -239,6 +239,7 @@ ul a {
   justify-content: center;
   font-family: 'Space Grotesk'
 }
+
 
 
 .pagecontent__value-item--padded {
@@ -252,6 +253,8 @@ ul a {
   border-radius:2rem 4rem;
   padding: 0.25rem;
 }
+
+/* Code + typewriter effects  */
 
 .pagecontent__code-container{
 
@@ -267,7 +270,7 @@ ul a {
   overflow-x:hidden;
 }
 
-#typewriter{
+.pagecontent__code {
   font-family:'Fira Mono';
   font-weight:500;
   white-space: pre;
@@ -275,7 +278,7 @@ ul a {
   flex-shrink:0rem;
 }
 
-#typewriter::after {
+.pagecontent__code--typing::after {
   content: "\25AE"; /* The cursor character */
   color: var(--text-color);
   animation: blink 1s step-end infinite;
@@ -288,10 +291,6 @@ ul a {
   50% { opacity: 0; }
 }
 
-#typewriter.typing-done::after {
-  opacity: 0;
-  animation: none;
-}
 
 /* Media queries for responsivnes */
 

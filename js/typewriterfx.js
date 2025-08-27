@@ -9,14 +9,12 @@ const retryDealy = (60 / 60) * 5 * 1000;
 function clenupTxt() {
   if (codeBlock.textContent.length > 0) {
     codeBlock.textContent = "";
-    codeBlock.classList.remove("typing-done");
   }
 }
 
 function typeWriter(text) {
   let index = 0;
   let letters = "";
-  codeBlock.classList.remove("typing-done");
 
   let interval = setInterval(() => {
     if (index < text.length) {
@@ -25,12 +23,12 @@ function typeWriter(text) {
       index++;
     } else {
       clearInterval(interval);
-      codeBlock.classList.add("typing-done");
     }
   }, 100);
 }
 
 async function typingAnimation() {
+  codeBlock.classList.add("pagecontent__code--typing");
   let programMap = await loadHelloProgramAsMap();
 
   if (localStorage.getItem(localStorageProgramDataState) === "false") {

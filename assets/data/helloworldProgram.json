@@ -1,0 +1,5 @@
+{
+   "python": "print('¡Hola Mundo!')",
+  "java": "System.out.println('Hej Världen!')",
+  "javascript":"console.log('Hello World!')"
+}
