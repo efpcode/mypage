@@ -1,5 +1,6 @@
 const pathToJSON = "./assets/data/helloworldProgram.json";
 const localStorageProgramDataKey = "programData";
+const localStorageProgramDataState = "programDataLoaded";
 
 async function loadProgramDataAndCache(pathToFile) {
   try {
@@ -12,6 +13,7 @@ async function loadProgramDataAndCache(pathToFile) {
       localStorageProgramDataKey,
       JSON.stringify(programData),
     );
+    localStorage.setItem(localStorageProgramDataState, JSON.stringify(true));
 
     return new Map(Object.entries(programData));
   } catch (error) {
@@ -25,6 +27,7 @@ async function loadProgramDataAndCache(pathToFile) {
       localStorageProgramDataKey,
       JSON.stringify(fallbackData),
     );
+    localStorage.setItem(localStorageProgramDataState, JSON.stringify(false));
 
     return new Map(Object.entries(fallbackData));
   }
@@ -41,7 +44,7 @@ function getProgramDataFromCache() {
   return new Map(Object.entries(programData));
 }
 
-async function loadHelloProgramAsMap() {
+export async function loadHelloProgramAsMap() {
   let programsMap = getProgramDataFromCache();
 
   if (!programsMap) {
@@ -49,5 +52,3 @@ async function loadHelloProgramAsMap() {
   }
   return programsMap;
 }
-
-export const DATAHELLOWORLD = loadHelloProgramAsMap();
