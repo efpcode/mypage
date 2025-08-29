@@ -198,7 +198,7 @@ ul a {
 }
 
 .site-header__nav--visible{
-  max-height:200px;
+  max-height:12.5rem;
 }
 
 
@@ -233,7 +233,11 @@ ul a {
 
 /* Profile Picture  */
 .pagecontent__profile-picture{
-  border-radius:2rem 4rem;
+    border-radius:100%;
+    border: 2rem solid  var(--text-color);
+    margin: 0 auto;
+    width:55%;
+    height:auto;
 }
 
 /* Value words  */
@@ -427,6 +431,8 @@ ul a {
 
   .pagecontent__profile-picture{
     grid-area:box3;
+    width:60%;
+    height:auto;
   }
   .pagecontent__code-container{
     grid-area:box4;
@@ -437,11 +443,18 @@ ul a {
   }
   .pagecontent__section{
     grid-area:box6;
+    width:60%;
+    height:auto;
+    margin: 0 auto;
   }
 
 
-  .youtube-responsive{
+  .youtube-responsive {
     grid-area:box7;
+    width:50%;
+    height:auto;
+    margin: 0 auto;
+    padding: 5rem;
   }
 
 }
@@ -458,33 +471,71 @@ ul a {
     margin:1rem auto;
     gap: 1rem;
     width:100%;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "box1 box1"
       "box2 box2"
       ". ."
-      ". box4"
-      "box3 box6"
       ". ."
-      ". box7"
-      "box5 box5";
+      "box3 ."
+      "box4 ."
+      "box5 box5"
+      "box6 box6"
+      ". ."
+      "box7 box7";
 
     align-items: center;
     justify-content: center;
  }
 
+  .pagecontent__main-heading{
+    grid-area:box2;
+    justify-self:center;
+    margin:2rem auto;
+  }
   .pagecontent__profile-picture{
     grid-area:box3;
     width:40%;
-    margin:0 auto;
-    border-radius:100%;
+    margin-top: -7rem;
     align-self:start;
-     margin-top: -9rem;
-    border: 2rem solid  var(--text-color);
   }
 
-  .youtube-responsive iframe{
+  .pagecontent__code-container{
+    grid-area:box4;
+    justify-self:center;
+    padding:0.8rem;
+  }
+  .pagecontent__section{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-area:box6;
+    width:100%;
+    height:auto;
+    row-gap:1rem;
+    padding:1rem;
+    margin:0 auto;
+  }
+
+  .pagecontent__section-heading{
+    width: 100%;
+  }
+
+.pagecontent__p:nth-child(odd) {
+  max-width:50%;
+  justify-self: start;
+  height:auto;
+}
+
+.pagecontent__p:nth-child(even) {
+  max-width:50%;
+  justify-self:end;
+}
+
+  .youtube-responsive{
     grid-area:box7;
+    width:50%;
+    height:auto;
+    margin: 0 auto;
   }
 }
 
