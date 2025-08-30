@@ -1,5 +1,5 @@
 const header = document.querySelector(".site-header");
-const mediaQueryResponse = window.matchMedia("(min-width: 1024px)");
+const mediaQueryResponse = window.matchMedia("(min-width: 667px)");
 let isMobile = null;
 
 function showHeader() {
@@ -19,13 +19,13 @@ function headerToggle() {
 }
 
 function setupHeaderToggleMode() {
-  const isNowDesktop = mediaQueryResponse.matches;
-  if (isMobile === isNowDesktop) {
+  const isNowTablet = mediaQueryResponse.matches;
+  if (isMobile === isNowTablet) {
     return;
   }
   document.removeEventListener("scroll", headerToggle);
 
-  if (!isNowDesktop) {
+  if (!isNowTablet) {
     console.log("Mobile Header");
     document.addEventListener("scroll", headerToggle);
     headerToggle();
@@ -33,7 +33,7 @@ function setupHeaderToggleMode() {
     console.log("Static Desktop Header");
     showHeader();
   }
-  isMobile = isNowDesktop;
+  isMobile = isNowTablet;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
