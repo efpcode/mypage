@@ -38,6 +38,7 @@ body.dark-mode {
   --btn-bg-color:#e0e0e0;
   --highlight-link:#000;
   --warning-text:#ff8503;
+  --succes-color:#04aa6d;
 }
 
 
@@ -49,6 +50,7 @@ body.dark-mode {
   --btn-bg-color:#e0e0e0;
   --highlight-link:#000;
   --warning-text:#ff8503;
+  --succes-color:#04aa6d;
 }
 
 body {
@@ -388,6 +390,12 @@ footer {
   align-items:center;
   max-width:64rem;
   margin: 0 auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.form.hidden{
+ opacity: 0;
+ pointer-events: none;
 }
 
 .form__fieldset{
@@ -484,6 +492,10 @@ footer {
 .form__button--primary{
   border-radius: 1rem 2rem;
 }
+
+.form__button--primary-disabled{
+  color:transparent;
+}
 .form__button--secondary{
   border-radius: 2rem 1rem;
 }
@@ -494,6 +506,11 @@ footer {
   height:auto;
   padding:1.5rem;
   margin:2rem;
+}
+
+.form__success-message{
+color:var(--succes-color);
+
 }
 
 

@@ -75,7 +75,7 @@
         <form class="form">
           <fieldset class="form__fieldset form__fieldset--name-email">
             <div class="form__group form__group--name">
-              <label class="form__label form__label-required" for="form-name"
+              <label class="form__label  for="form-name"
                 >Please enter your full legal name
               </label>
               <input
@@ -89,11 +89,11 @@
                 aria-describedby="nameFieldHelp"
               />
               <small class="form__help-text" id="nameFieldHelp"
-                >Please enter only letters A-Z or a-z and space.</small
+                ></small
               >
             </div>
             <div class="form__group form__group--email">
-              <label class="form__label form__label-required" for="form-email"
+              <label class="form__label" for="form-email"
                 >Please enter your email
               </label>
               <input
@@ -107,7 +107,7 @@
                 aria-describedby="emailFieldHelp"
               />
               <small class="form__help-text" id="emailFieldHelp"
-                >Please enter your an email that contains at least @.</small
+                ></small
               >
             </div>
           </fieldset>
@@ -135,7 +135,7 @@
               </option>
             </select>
             <small class="form__help-text" id="menuOptionsHelp"
-              >Please pick an option.</small
+              ></small
             >
           </div>
           <div class="form__group form__group--textarea">
@@ -153,15 +153,22 @@
               cols="42"
             ></textarea>
             <small class="form__help-text" id="textareaFieldHelp">
-              Enter your message here, up to 240 characters.
             </small>
           </div>
 
           <div class="form__actions form__group--buttons">
-            <button class="form__button form__button--primary" type="submit">
+            <button
+              id="submit-button"
+              class="form__button form__button--primary"
+              type="submit"
+            >
               Send
             </button>
-            <button class="form__button form__button--secondary" type="reset">
+            <button
+              id="cancel-button"
+              class="form__button form__button--secondary"
+              type="reset"
+            >
               Cancel
             </button>
           </div>
@@ -219,5 +226,6 @@
     <script src="../js/buttontouch.js"></script>
     <script src="../js/headerhidden.js"></script>
     <script src="../js/menuclear.js"></script>
+    <script src="../js/formsvalidator.js"></script>
   </body>
 </html>
