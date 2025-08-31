@@ -82,9 +82,6 @@ header, main, footer {
   width:100%;
 }
 
-main {
-  flex-grow: 1;
-}
 
 img {
   max-width: 100%;
@@ -117,13 +114,6 @@ a.touched{
   border-radius: 1rem/2.3rem;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto; 
-}
 
 
 /* Header elements */
@@ -390,13 +380,8 @@ footer {
   align-items:center;
   max-width:64rem;
   margin: 0 auto;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.form.hidden{
- opacity: 0;
- pointer-events: none;
-}
 
 .form__fieldset{
   border:none;
@@ -686,13 +671,10 @@ color:var(--succes-color);
     grid-template-areas:
       "box1 box1"
       "box2 box2"
-      ". ."
-      ". ."
       "box3 ."
       "box4 ."
       "box5 box5"
       "box6 box6"
-      ". ."
       "box7 box7";
 
     align-items: center;

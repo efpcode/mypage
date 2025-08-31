@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>My Portfolio</title>
+    <link
+      rel="icon"
+      href="./mockups/logo.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="dark-mode">
+    <header class="site-header site-header--hidden">
+      <div class="site-header__top">
+        <a href="/" class="site-header__logo-link">
+          <img src="./mockups/logo.png" alt="my logo" class="site-header__logo"
+        /></a>
+
+        <button
+          aria-label="Toggle light mode"
+          aria-pressed="true"
+          type="button"
+          class="site-header__light-or-darkmode-toggle site-header__button"
+        >
+          &#x1F4A1;
+        </button>
+
+        <button
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          type="button"
+          class="site-header__menu-toggle site-header__button"
+        >
+          &#9776;
+        </button>
+      </div>
+
+      <nav class="site-header__nav">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="/">Home</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="./about.html">About me</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="./pages/contactform.html"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="pagecontent">
+      <h1 class="pagecontent__main-heading">About Me</h1>
+      <section class="pagecontent__section">
+        <h2 class="pagecontent__section-heading">From DNA to Coding Away</h2>
+        <p class="pagecontent__p">
+          I discovered the joys of coding during my bachelor's degree in
+          Molecular Biology. Like many others, my first introduction to this
+          world was through the programming language Python (version 2.6).
+        </p>
+        <p class="pagecontent__p">
+          My iterative mindset fuels my continuous drive for improvement and
+          that has lead me to everlasting journey that is testing and coding.
+        </p>
+
+        <p class="pagecontent__p">
+          I was immediately hooked on how fast and direct the feedback loop was,
+          especially in contrast to world of biology, where experiments could
+          take a month or more to yield a meaningful result.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <section class="site-footer">
+        <ul class="site-footer__social-list">
+          <li class="site-footer__social-item">
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/esteban-fernandez-parada-337b5140"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="site-footer__social-icon"
+                src="./mockups/logo.png"
+                alt="linkedin link"
+              />linkedin</a
+            >
+          </li>
+          <li class="site-footer__social-item">
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/esteban-fernandez-parada-337b5140"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="site-footer__social-icon"
+                src="./mockups/logo.png"
+                alt="linkedin link"
+            /></a>
+          </li>
+          <li class="site-footer__social-item">
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/esteban-fernandez-parada-337b5140"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="site-footer__social-icon"
+                src="./mockups/logo.png"
+                alt="linkedin link"
+            /></a>
+          </li>
+        </ul>
+        <h5 class="site-footer__copyright">© 2025 Esteban Fernandez Parada</h5>
+      </section>
+    </footer>
+
+    <script src="js/menutoggle.js"></script>
+    <script src="js/colormode.js"></script>
+    <script src="js/buttontouch.js"></script>
+    <script src="js/headerhidden.js"></script>
+  </body>
+</html>
