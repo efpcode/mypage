@@ -1,5 +1,6 @@
 const headerButtons = document.querySelectorAll(".site-header__button");
 const formButtons = document.querySelectorAll(".form__button");
+const allLinks = document.querySelectorAll("a");
 
 function touchedButtonStart(event) {
   const button = event.currentTarget;
@@ -7,6 +8,9 @@ function touchedButtonStart(event) {
     button.classList.add("site-header__button--touched");
   } else if (button.classList.contains("form__button")) {
     button.classList.add("form__button--touched");
+  }
+  if (button.tagName === "A") {
+    button.classList.add("touched");
   }
 }
 
@@ -22,6 +26,9 @@ function touchedButtonEnd(event) {
     button.classList.remove("site-header__button--touched");
     button.classList.remove("form__button--touched");
     button.blur();
+  }
+  if (button.tagName === "A") {
+    button.classList.remove("touched");
   }
 }
 
@@ -43,4 +50,5 @@ function setupEventListeners(buttons) {
 document.addEventListener("DOMContentLoaded", () => {
   setupEventListeners(headerButtons);
   setupEventListeners(formButtons);
+  setupEventListeners(allLinks);
 });

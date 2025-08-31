@@ -102,6 +102,15 @@ ul a {
   display: inline;
 }
 
+a:hover,
+a:active,
+a:focus,
+a.touched{
+  background-color: var(--btn-bg-color); 
+  color: var(--highlight-link);
+  border-color:transparent;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -232,13 +241,13 @@ footer {
   color: var(--text-color);
 }
 
-.site-header__nav-link:hover,
+/*.site-header__nav-link:hover,
 .site-header__nav-link:active,
 .site-header__nav-link:focus{
-  background-color: var(--btn-bg-color); 
+  background-color: var(--btn-bg-color);
   color: var(--highlight-link);
   border-color:transparent;
-}
+}*/
 
 .site-header__nav--visible{
   max-height:12.5rem;
