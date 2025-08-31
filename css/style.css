@@ -116,17 +116,19 @@ footer {
 /* headerbutton background-color switches */
 
 .site-header__button{
-  width:2rem;
-  height:2rem;
+  /*width:2rem;*/
+  /*height:2rem;*/
   display: flex;
   border-radius: 0.625rem;
   justify-content:center;
   border: 0;
   cursor: pointer;
-  padding: 0;
+  padding: 2rem;
   align-items: center;
   flex-shrink: 0;
   background-color: var(--btn-bg-color);
+  max-width:4rem;
+  max-height:4rem;
 }
 
 .site-header__button--touched{
@@ -233,7 +235,7 @@ footer {
 .site-header__nav-link:hover,
 .site-header__nav-link:active,
 .site-header__nav-link:focus{
-  background-color: var(--btn-bg-color); /* A slightly darker shade of your background */
+  background-color: var(--btn-bg-color); 
   color: var(--highlight-link);
   border-color:transparent;
 }
