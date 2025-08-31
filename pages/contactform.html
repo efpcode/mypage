@@ -73,12 +73,13 @@
       <section class="pagecontent__section">
         <h2 class="pagecontent__section-heading">Get in touch!</h2>
         <form class="form">
-          <fieldset class="form__fieldset">
-            <div class="form__group">
-              <label class="form__label form__label-required" for="name"
+          <fieldset class="form__fieldset form__fieldset--name-email">
+            <div class="form__group form__group--name">
+              <label class="form__label form__label-required" for="form-name"
                 >Please enter your full legal name
               </label>
               <input
+                id="form-name"
                 class="form__input"
                 type="text"
                 name="full-name"
@@ -88,14 +89,15 @@
                 aria-describedby="nameFieldHelp"
               />
               <small class="form__help-text" id="nameFieldHelp"
-                >Please enter full your legal name.</small
+                >Please enter only letters A-Z or a-z and space.</small
               >
             </div>
-            <div class="form__group">
-              <label class="form__label form__label-required" for="email"
+            <div class="form__group form__group--email">
+              <label class="form__label form__label-required" for="form-email"
                 >Please enter your email
               </label>
               <input
+                id="form-email"
                 class="form__input"
                 type="email"
                 name="email"
@@ -105,28 +107,22 @@
                 aria-describedby="emailFieldHelp"
               />
               <small class="form__help-text" id="emailFieldHelp"
-                >Please enter your email.</small
+                >Please enter your an email that contains at least @.</small
               >
             </div>
           </fieldset>
 
-          <div class="form__group">
+          <div class="form__group form__group--subject">
             <label class="form__label" for="form-subject">Form Subject</label>
             <select
               class="form__input"
               id="form-subject"
               name="form-subject"
+              aria-describedby="menuOptionsHelp"
               required
             >
-              <option
-                class="form__option"
-                disabled
-                selection
-                hidden
-                autocomplete="off"
-                value=""
-              >
-                Please select an option below
+              <option class="form__option" disabled selected hidden value="">
+                Please select a subject
               </option>
               <option class="form__option" value="internship">
                 internship (LIA)
@@ -138,9 +134,30 @@
                 Employment
               </option>
             </select>
+            <small class="form__help-text" id="menuOptionsHelp"
+              >Please pick an option.</small
+            >
+          </div>
+          <div class="form__group form__group--textarea">
+            <label class="form__label" for="textarea"
+              >Please enter your message</label
+            >
+            <textarea
+              id="textarea"
+              required
+              class="form__textarea"
+              aria-describedby="textareaFieldHelp"
+              placeholder="Type your message"
+              name="textarea"
+              rows="6"
+              cols="42"
+            ></textarea>
+            <small class="form__help-text" id="textareaFieldHelp">
+              Enter your message here, up to 240 characters.
+            </small>
           </div>
 
-          <div class="form__actions">
+          <div class="form__actions form__group--buttons">
             <button class="form__button form__button--primary" type="submit">
               Send
             </button>
@@ -201,5 +218,6 @@
     <script src="../js/colormode.js"></script>
     <script src="../js/buttontouch.js"></script>
     <script src="../js/headerhidden.js"></script>
+    <script src="../js/menuclear.js"></script>
   </body>
 </html>
