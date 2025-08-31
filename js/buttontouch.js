@@ -35,8 +35,14 @@ function touchedButtonEnd(event) {
 function setupEventListeners(buttons) {
   if (buttons) {
     buttons.forEach((button) => {
-      const startEvents = ["mouseenter", "click", "touchstart"];
-      const endEvents = ["mouseleave", "mouseup", "touchend", "touchcancel"];
+      const startEvents = ["mouseenter", "click", "touchstart", "pointerdown"];
+      const endEvents = [
+        "mouseleave",
+        "mouseup",
+        "touchend",
+        "touchcancel",
+        "pointerup",
+      ];
 
       startEvents.forEach((evt) =>
         button.addEventListener(evt, touchedButtonStart),
@@ -47,8 +53,24 @@ function setupEventListeners(buttons) {
     });
   }
 }
+
+function setupLinkRedirect() {
+  allLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      link.classList.add("touched");
+
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 500);
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setupEventListeners(headerButtons);
   setupEventListeners(formButtons);
   setupEventListeners(allLinks);
+  setupLinkRedirect();
 });

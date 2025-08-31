@@ -98,8 +98,10 @@ list-style-type: none;
 }
 
 ul a {
-  margin :1rem;
+  margin :0.5rem;
   display: inline;
+  background-color:var(--page-bg);
+  padding:1rem;
 }
 
 a:hover,
@@ -109,6 +111,8 @@ a.touched{
   background-color: var(--btn-bg-color); 
   color: var(--highlight-link);
   border-color:transparent;
+  transition: all ease-in-out 0.3s;
+  border-radius: 1rem/4rem;
 }
 
 footer {
@@ -241,13 +245,6 @@ footer {
   color: var(--text-color);
 }
 
-/*.site-header__nav-link:hover,
-.site-header__nav-link:active,
-.site-header__nav-link:focus{
-  background-color: var(--btn-bg-color);
-  color: var(--highlight-link);
-  border-color:transparent;
-}*/
 
 .site-header__nav--visible{
   max-height:12.5rem;
