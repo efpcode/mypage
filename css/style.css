@@ -11,46 +11,40 @@ html, body {
   flex-direction: column; /* Stack elements vertically */
 }
 
+
+
 :root {
-  /* Using RGB values for future flexibility with rgba() */
+  /* Using the primary palette for the regular (light) theme */
   --page-bg-rgb: 255, 255, 255;
-  --text-color-rgb: 51, 51, 51;
-  --btn-color-rgb: 255, 0, 0;
-  --btn-bg-color-rgb: 224, 224, 224;
-  --highlight-link-rgb: 0, 0, 0;
+  --text-color-rgb: 35, 100, 146;
+  --btn-color-rgb: 255, 255, 255;
+  --btn-bg-color-rgb: 114, 151, 178;
+  --highlight-link-rgb: 228, 181, 43; /* New highlight color */
 
-}
-
-body.dark-mode {
-  /* Using RGB values for dark mode colors */
-  --page-bg-rgb: 18, 18, 18;
-  --text-color-rgb: 255, 255, 255;
-  --btn-color-rgb: 255, 0, 0;
-  --btn-bg-color-rgb: 224, 224, 224;
-  --highlight-link-rgb: 0, 0, 0;
-}
-
-
-:root {
   --page-bg: #ffffff;
-  --text-color: #333333;
-  --btn-color:red;
-  --btn-bg-color:#e0e0e0;
-  --highlight-link:#000;
-  --warning-text:#ff8503;
-  --succes-color:#04aa6d;
+  --text-color: #236492;
+  --btn-color:#ffffff;
+  --btn-bg-color:#7297b2;
+  --highlight-link:#E4B52B; /* New highlight color */
+  --warning-text:#ff8503; 
+  --succes-color:#04aa6d; 
 }
 
-
-
 body.dark-mode {
-  --page-bg: #121212;
-  --text-color: #ffffff;
-  --btn-color:red;
-  --btn-bg-color:#e0e0e0;
-  --highlight-link:#000;
-  --warning-text:#ff8503;
-  --succes-color:#04aa6d;
+  /* Using the primary palette for the dark theme */
+  --page-bg-rgb: 0, 12, 20;
+  --text-color-rgb: 206, 213, 218;
+  --btn-color-rgb: 31, 8, 0; 
+  --btn-bg-color-rgb: 228, 93, 43;
+  --highlight-link-rgb: 228, 181, 43; /* New highlight color */
+
+  --page-bg: #000c14;
+  --text-color: #ced5da;
+  --btn-color:#1f0800;
+  --btn-bg-color:#e45d2b;
+  --highlight-link:#E4B52B; /* New highlight color */
+  --warning-text:#ff8503; 
+  --succes-color:#04aa6d; 
 }
 
 body {
@@ -426,6 +420,11 @@ a.touched{
   text-decoration-line: underline;
 }
 
+.form__textarea{
+  font-family:"Fira Mono";
+  font-weight:600;
+}
+
 .form__label{
   margin: 0.5rem auto;
   padding:1rem;
@@ -439,6 +438,7 @@ a.touched{
   min-width:10rem;
   width:100%;
   text-align:center;
+  font-weight:500;
 }
 
 .form__help-text{
@@ -448,6 +448,7 @@ a.touched{
   text-wrap:balance;
   display:none;
   color:var(--warning-text);
+  font-weight:500;
 }
 
 .form__help-text--visible{
@@ -662,6 +663,10 @@ color:var(--succes-color);
   transition: all 1.9s ease-in-out 1.5s;
   overflow:hidden;
   animation:none;
+}
+
+.form__input{
+  font-size:large;
 }
 
 
