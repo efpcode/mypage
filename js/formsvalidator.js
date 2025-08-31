@@ -119,17 +119,21 @@ function whenPressingSubmit(event) {
 
   if (isFormValid) {
     const thxMessage = document.createElement("h3");
+    const callToAction = document.createElement("p");
     thxMessage.innerText = "Thank your for contacting me Hope to meet up soon.";
+    callToAction.innerText =
+      "If you wish to fill out the form again please refresh the page.";
     thxMessage.classList.add("form__success-message");
 
     const thxMessageExists = form.querySelector(".form__success-message");
 
     if (!thxMessageExists) {
       form.appendChild(thxMessage);
+      form.appendChild(callToAction);
     }
 
     allFormsGroups.forEach((group) => {
-      group.classList.add("hidden");
+      group.style.display = "none";
     });
   }
 }
