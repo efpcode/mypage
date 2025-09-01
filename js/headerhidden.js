@@ -1,5 +1,12 @@
 const header = document.querySelector(".site-header");
 const mediaQueryResponse = window.matchMedia("(min-width: 667px)");
+const yAxisThreshold = 50;
+const offsetYaxis = 25 + yAxisThreshold;
+const isScrollable =
+  document.body.scrollHeight > window.innerHeight + offsetYaxis;
+
+const pageContent = document.querySelector(".pagecontent");
+const headerHeight = header.offsetHeight;
 let isMobile = null;
 
 function showHeader() {
@@ -11,7 +18,9 @@ function hideHeader() {
 }
 
 function headerToggle() {
-  if (window.scrollY > 50) {
+  if (!isScrollable) {
+    showHeader();
+  } else if (window.scrollY > 50) {
     showHeader();
   } else {
     hideHeader();

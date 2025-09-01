@@ -51,7 +51,7 @@ body {
   background-color: var(--page-bg);
   color: var(--text-color);
   /* Add a smooth transition for the color change */
-  transition: background-color 0.4s ease, color 0.4s ease; 
+  transition: background-color 0.6s ease, color 0.4s ease; 
 }
 
 body{
@@ -270,6 +270,8 @@ a.touched{
 .pagecontent > * {
   transition: all 0.5s ease-in-out;
 }
+
+.pagecontent{margin-top:6rem;}
 
 .pagecontent__main-heading{
   display: grid;
@@ -611,6 +613,11 @@ color:var(--succes-color);
 
 
 @media (min-width:667px){
+
+  .pagecontent{
+    margin-top:0;
+  }
+
   body{
     font-size:1.1rem;
   }
