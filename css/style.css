@@ -610,6 +610,21 @@ color:var(--succes-color);
 
 /* Media queries for responsivnes */
 
+@media (max-width: 349px) {
+
+
+.site-header__nav-list{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+row-gap: 2rem;
+column-gap: 2rem
+
+}
+
+}
 
 
 @media (min-width:667px){
