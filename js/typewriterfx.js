@@ -36,7 +36,7 @@ async function typingAnimation() {
     setTimeout(() => {
       if (
         confirm(
-          "Could not load full program data. Try again or continue with fallback data?",
+          "* Could not load expected data.\n\nTry to reload data by pressing confirm/accept/ok\nOR\nContinue with fallback data by pressing cancel/decline?",
         )
       ) {
         console.log(

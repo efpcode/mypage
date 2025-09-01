@@ -91,7 +91,6 @@ list-style-type: none;
 }
 
 ul a {
-  margin :0.5rem;
   display: inline;
   background-color:var(--page-bg);
   padding:1rem;
@@ -135,26 +134,47 @@ a.touched{
 
 
 
-/* iframe with youtube video */
+/* iframe with video */
 
 .youtube-responsive {
-  position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-  overflow: hidden;
-  margin-top:1rem;
-  margin-bottom:1rem;
   height:auto;
+  display:flex;
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-top: 56.25%;
+  overflow:hidden;
+  position:relative;
+
 }
 .youtube-responsive iframe {
+  border: 0;
+  border-radius:1rem 2rem;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  border-radius:1rem 2rem;
 
+}
+
+.youtube-responsive__figcaption{
+  text-align:center;
+  flex-direction: column;
+  width:100%;
+  display:flex;
+  position:relative;
+  background-color:var(--page-bg);
+  padding:1rem;
+}
+
+.youtube-responsive__figcaption h3{
+  font-weight:600;
+  font-family:"Fira Mono";
+  font-style:italic;
+  font-size:larger;
 }
 
 
@@ -170,9 +190,7 @@ a.touched{
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   backdrop-filter: blur(8px);
   margin: 0 auto;
-  transition: opacity 1.2s ease-in-out 1.2s, 
-  transform 1.2s ease-in-out 1.2s,  
-  max-height 1.2s ease-in-out 1.2s;
+  transition: opacity 1.2s ease-in-out 1.2s;
   transform:translateX(-50%);
   max-height:20rem;
   overflow: visible;
@@ -592,7 +610,7 @@ color:var(--succes-color);
 
 
 
-@media (min-width:667px) {
+@media (min-width:667px){
   body{
     font-size:1.1rem;
   }
@@ -639,15 +657,15 @@ color:var(--succes-color);
     width:60%;
     height:auto;
     margin: 0 auto;
+    padding:0;
   }
 
 
   .youtube-responsive {
     grid-area:box7;
-    width:50%;
+    width:60%;
     height:auto;
     margin: 0 auto;
-    padding: 9rem;
   }
 
 }
@@ -743,10 +761,9 @@ color:var(--succes-color);
 
   .youtube-responsive{
     grid-area:box7;
-    width:50%;
+    width:100%;
     height:auto;
     margin: 0 auto;
-    padding:10rem;
   }
 }
 
