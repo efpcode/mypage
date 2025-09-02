@@ -364,6 +364,14 @@ a.touched{
   border-radius:1rem / 0.85rem;
   text-align: center;
 }
+.pagecontent__section-heading--fontstyle{
+  font-family:"Fira Mono";
+  animation:blur-to-sharp 6.5s ease-in-out infinite;
+  color:var(--page-bg);
+  background-color:var(--succes-color);
+  border-radius:1rem 3rem;
+  padding:0.25rem;
+}
 
 
 /* main section paragraph  */
@@ -524,10 +532,16 @@ color:var(--succes-color);
 
 
 @keyframes blur-to-sharp {
-  from{
+  0%{
     filter:blur(4px);
   }
-  to{
+  30%{
+    filter:blur(2px);
+  }
+  70%{
+    filter:blur(0);
+  }
+  100%{
     filter:blur(0);
   }
   
